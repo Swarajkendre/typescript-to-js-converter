@@ -1,0 +1,35 @@
+{
+  "name": "typescript-to-js-converter",
+  "version": "1.0.0",
+  "description": "Convert TypeScript to plain JavaScript using Babel or esbuild",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader tsx ./src/index.ts",
+    "babel-convert": "node dist/converters/babel-converter.js",
+    "esbuild-convert": "node dist/converters/esbuild-converter.js",
+    "test": "node dist/test.js"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "transpiler",
+    "babel",
+    "esbuild",
+    "converter"
+  ],
+  "author": "Swarajkendre",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-typescript": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "esbuild": "^0.19.0",
+    "typescript": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0"
+  }
+}
